@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "assistant"
+version = "0.1.0"
+description = "personal voice assistant"
+authors = ["salaxieb <salaxieb.ildar@gmail.com>"]
+readme = "README.md"
+packages = [{include = "assitant"}]
+
+[tool.poetry.dependencies]
+python = ">=3.8.1,<4.0"
+tox = "^4.11.3"
+pylint = "^2.17.6"
+black = "^23.9.1"
+mypy = "^1.5.1"
+wemake-python-styleguide = "^0.18.0"
+langchain = "^0.0.304"
+ctransformers = "^0.2.27"
+google-auth-httplib2 = "^0.1.1"
+google-auth-oauthlib = "^1.1.0"
+google-api-python-client = "^2.101.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.flake8]
+extend-ignore = """
+    D100,
+    D104,
+"""
